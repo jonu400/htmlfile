@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LBTOKG</title>
+    <style>
+        #container{
+            height: 230px;
+            width: 250px;
+            background-color:lightcoral;
+            border: 10px ridge blue;
+            text-align: center;
+            margin-left: 500px;
+
+            margin-top: 50px;
+        }
+        #error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"><h1>LB TO KG</h1>
+    LB:<input id="lb"  type="search">
+    <h4><span id="error"></span></h4>
+    KG:<input id="kg"  type="search">
+    <br><br>
+    <button id="sub">submit</button></div>
+    
+    <script>
+        userlb=document.getElementById("lb");
+        userkg=document.getElementById("kg");
+        submit=document.getElementById("sub");
+        errr=document.getElementById("error");
+        submit.addEventListener("click",function(){
+            if(userlb.value==""){
+                error.innerText="Invalid Input";
+
+            }
+            else{
+                error.innerText="";
+                userkg.value=userlb.value/2.20462262
+
+            }
+          
+        })
+        let sum =0    //find avarage by array:
+        let array =[5,10,15]
+        for(let i=0;i<array.length; i++)
+        {
+            sum+=array[i]
+        }
+        document.write("AVR is"+sum/array.length)
+        
+        //Sum of array number using loop:
+        document.write("Total is"+sum)
+   
+
+    </script>
+</body>
+</html>

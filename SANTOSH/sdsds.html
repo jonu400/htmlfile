@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showImage()
+        {
+            document.getElementById("hello").style.visibility="visible";
+            document.getElementById("hi").style.visibility="hidden";
+        }
+        function Image()
+        {
+                document.getElementById("hi").style.visibility="visible";
+                document.getElementById("hello").style.visibility="hidden";
+        }
+      
+       
+       
+      
+    </script>
+    
+</head>
+<body>
+   <div><img id="hello" src="./download (2).jpg" style="visibility:hidden;" >
+    <input type="button" value="click here" onclick="showImage()">
+    <img id="hi" src="./download 3.jpg" style="visibility:hidden;" >
+    <input type="button" value="click on" onclick="Image()"></div><br>
+    <br>
+    <br> 
+    <button type="button" onclick="document.getElementById('ran').src='download3.jpg'">Click1</button>
+    <img id="ran" src="./download 3.jpg" style="width: 100px;">
+    <button type="button" onclick=" document.getElementById('ran').src='download(2).jpg'">click2 </button>
+
+</body>
+</html>

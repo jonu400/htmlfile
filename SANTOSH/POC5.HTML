@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      #myImg {
+        border-radius: 2px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    #myImg:hover {opacity: 0.5;}
+    #name:hover {  opacity: 0.5; }
+  </style>
+</head>
+<body>
+    <img id="name" src="./download (2).jpg" alt="COMPANY" width="400" height="300">
+
+    <img id="myImg" src="./download 3.jpg" alt="FREE SOFTWARE DEVELOPMENT" width="600" height="300">
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var space = document.getElementById('name');
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+        }
+        </script>
+</body>
+</html>

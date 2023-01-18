@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gingerbread .body {
+        fill: #cd803d;
+      }
+      
+      .gingerbread .eye {
+        fill: white;
+      }
+      
+      .gingerbread .mouth {
+        fill: none;
+        stroke: white;
+        stroke-width: 2px;
+      }
+      
+      .gingerbread .limb {
+        stroke: #cd803d;
+        stroke-width: 35px;
+        stroke-linecap: round;}
+    </style>
+</head>
+<body>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <polygon points="0,0 80,120 -80,120" fill="#234236" />
+        <polygon points="0,-40 60,60 -60,60" fill="#0C5C4C" />
+        <polygon points="0,-80 40,0 -40,0" fill="#38755B" />
+        <rect x="-20" y="120" width="40" height="30" fill="brown" />
+      </svg>
+      <br>
+      <svg class="gingerbread" width="200" height="200" viewBox="-100 -100 200 200">
+        <circle class="body" cx="0" cy="-50" r="30" />
+      
+        <circle class="eye" cx="-12" cy="-55" r="3" />
+        <circle class="eye" cx="12" cy="-55" r="3" />
+        <rect class="mouth" x="-10" y="-40" width="20" height="5" rx="2" />
+      
+        <line class="limb" x1="-40" y1="-10" x2="40" y2="-10" />
+        <line class="limb" x1="-25" y1="50" x2="0" y2="-15" />
+        <line class="limb" x1="25" y1="50" x2="0" y2="-15" />
+      
+        <circle class="button" cx="0" cy="-10" r="5" />
+        <circle class="button" cx="0" cy="10" r="5" />
+      </svg>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">      
+  <g transform="translate(0 5)">
+    <g>
+      <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+      <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+    </g>
+    <g transform="rotate(72)">
+      <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+      <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+    </g>
+    <g transform="rotate(-72)">
+      <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+      <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+    </g>
+    <g transform="rotate(144)">
+      <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+      <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+    </g>
+    <g transform="rotate(-144)">
+      <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+      <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+    </g>
+  </g>
+</svg>
+<svg width="200" height="400" viewBox="-100 -200 200 400">
+  <path
+    d="
+      M 0 -80
+      Q 5 -75 0 -70
+      Q -10 -65 0 -60
+      Q 15 -55 0 -50
+      Q -20 -45 0 -40
+      Q 25 -35 0 -30
+      Q -30 -25 0 -20
+      Q 35 -15 0 -10
+      Q -40 -5 0 0
+      Q 45 5 0 10
+      Q -50 15 0 20
+      Q 55 25 0 30
+      Q -60 35 0 40
+      Q 65 45 0 50
+      Q -70 55 0 60
+      Q 75 65 0 70
+      Q -80 75 0 80
+      Q 85 85 0 90
+      Q -90 95 0 100
+      Q 95 105 0 110
+      Q -100 115 0 120
+      L 0 140
+      L 20 140
+      L -20 140"
+    fill="none"
+    stroke="#0C5C4C"
+    stroke-width="5"
+  />
+</svg>
+<svg width="240" height="320" viewBox="0 0 240 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M228 319.5H12C5.64873 319.5 0.5 314.351 0.5 308V12C0.5 5.64873 5.64873 0.5 12 0.5H159.175C159.571 0.5 159.952 0.656748 160.233 0.936021L239.057 79.2681C239.341 79.5497 239.5 79.9326 239.5 80.3321V308C239.5 314.351 234.351 319.5 228 319.5Z" fill="#FFF9F2" stroke="#FFC681"/>
+    <path d="M160.5 1.20711L238.793 79.5H172C165.649 79.5 160.5 74.3513 160.5 68V1.20711Z" fill="#FFF9F2" stroke="#FFC681"/>
+    <path d="M68.8438 244.072C69.1738 250.699 74.7344 254.914 83.1387 254.914C92.0254 254.914 97.5352 250.496 97.5352 243.387C97.5352 237.826 94.4121 234.729 86.9727 233.027L82.7578 232.062C78.2129 230.996 76.3594 229.549 76.3594 227.035C76.3594 223.861 79.1523 221.779 83.3672 221.779C87.3789 221.779 90.2227 223.836 90.6797 227.111H96.9512C96.6465 220.84 91.0859 216.447 83.3926 216.447C75.1914 216.447 69.7578 220.865 69.7578 227.467C69.7578 232.9 72.8809 236.176 79.5332 237.699L84.2812 238.791C88.9785 239.883 90.9844 241.508 90.9844 244.174C90.9844 247.297 87.8613 249.557 83.5449 249.557C78.8984 249.557 75.6484 247.424 75.2422 244.072H68.8438Z" fill="#FF8C02"/>
+    <path d="M121.59 254L134.26 217.361H127.278L118.137 246.51H117.705L108.489 217.361H101.252L114.049 254H121.59Z" fill="#FF8C02"/>
+    <path d="M170.731 239.375V234.805H155.522V239.807H164.333L164.307 240.568C164.206 245.748 160.397 249.227 154.811 249.227C148.286 249.227 144.198 244.047 144.198 235.617C144.198 227.314 148.21 222.135 154.608 222.135C159.305 222.135 162.581 224.471 163.901 228.711H170.426C169.258 221.246 163.063 216.447 154.608 216.447C144.173 216.447 137.495 223.938 137.495 235.668C137.495 247.525 144.096 254.914 154.71 254.914C164.485 254.914 170.731 248.846 170.731 239.375Z" fill="#FF8C02"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M99 117C96.7909 117 95 118.791 95 121V148.939C94.3386 148.979 93.6717 149 93 149C75.3269 149 61 134.673 61 117C61 99.3269 75.3269 85 93 85C110.673 85 125 99.3269 125 117H99ZM125 117H155C157.209 117 159 118.791 159 121V177C159 179.209 157.209 181 155 181H99C96.7909 181 95 179.209 95 177V148.939C111.741 147.906 125 134.001 125 117Z" fill="#FFC681"/>
+    </svg>
+
+
+
+    <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <path fill="none" d="M0 0h24v24H0z"/>
+            <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2 4v2h2V7H5zm0 4v2h2v-2H5zm0 4v2h14v-2H5zm4-4v2h2v-2H9zm0-4v2h2V7H9zm4 0v2h2V7h-2zm4 0v2h2V7h-2zm-4 4v2h2v-2h-2zm4 0v2h2v-2h-2z"/>
+        </g>
+    </svg>
+    
+    
+</body>
+</html>

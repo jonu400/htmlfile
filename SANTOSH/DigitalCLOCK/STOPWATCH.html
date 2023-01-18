@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch</title>
+    <style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+66,7db9e8+100&1+0,0+100 */
+background: -moz-linear-gradient(-45deg,  rgba(30,87,153,1) 0%, rgba(30,87,153,0.34) 66%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(30,87,153,1) 0%,rgba(30,87,153,0.34) 66%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(30,87,153,1) 0%,rgba(30,87,153,0.34) 66%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-repeat: no-repeat;
+background-size: cover;
+    }
+    .digit{
+        font-size: 200px;
+    }
+    .text{
+        font-size: 70px;
+    }
+    .btn-container{
+      text-align: center;
+      
+    }
+    .btn{
+        font-size: 50px;
+       /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b4ddb4+0,008a00+40,008a00+40,b4ddb4+50,52b152+52,83c783+59,83c783+59,52b152+73,52b152+73,005700+83,002400+98 */
+background: rgb(180,221,180); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(180,221,180,1) 0%, rgba(0,138,0,1) 40%, rgba(0,138,0,1) 40%, rgba(180,221,180,1) 50%, rgba(82,177,82,1) 52%, rgba(131,199,131,1) 59%, rgba(131,199,131,1) 59%, rgba(82,177,82,1) 73%, rgba(82,177,82,1) 73%, rgba(0,87,0,1) 83%, rgba(0,36,0,1) 98%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(180,221,180,1) 0%,rgba(0,138,0,1) 40%,rgba(0,138,0,1) 40%,rgba(180,221,180,1) 50%,rgba(82,177,82,1) 52%,rgba(131,199,131,1) 59%,rgba(131,199,131,1) 59%,rgba(82,177,82,1) 73%,rgba(82,177,82,1) 73%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 98%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(180,221,180,1) 0%,rgba(0,138,0,1) 40%,rgba(0,138,0,1) 40%,rgba(180,221,180,1) 50%,rgba(82,177,82,1) 52%,rgba(131,199,131,1) 59%,rgba(131,199,131,1) 59%,rgba(82,177,82,1) 73%,rgba(82,177,82,1) 73%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+cursor: pointer;
+    }
+    .stp{
+        font-size: 50px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e6f0a3+0,d2e638+50,c3d825+58,dbf043+97 */
+background: rgb(230,240,163); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(230,240,163,1) 0%, rgba(210,230,56,1) 50%, rgba(195,216,37,1) 58%, rgba(219,240,67,1) 97%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 58%,rgba(219,240,67,1) 97%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 58%,rgba(219,240,67,1) 97%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+cursor: pointer;
+    }
+    .rst{
+        font-size: 50px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+62,f02f17+71,e73827+93 */
+background: rgb(248,80,50); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 62%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 93%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 62%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 93%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 62%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+cursor: pointer;
+    }
+
+    
+
+    </style>
+</head>
+<body>
+   
+   <div>
+    <div class="Time">
+        <span class="digit" id="hr">00</span>
+        <span class="text">hr</span>
+        <span class="digit"id="min">00</span>
+        <span class="text">min</span>
+        <span class="digit"id="sec">00</span>
+        <span class="text">sec</span>
+        <span class="digit"id="count">00</span>
+    </div>
+    <div class="btn-container">
+        <button class="btn" type="button" id="start" onclick="start()">start</button>
+        <button class="stp"type="button" id="stop"onclick="stop()">stop</button>
+        <button class="rst"type="button" id="reset" onclick="reset()">reset</button>
+        
+    </div>
+   </div>
+   
+   <script src="stopwatch.js"></script>
+</body>
+</html>
